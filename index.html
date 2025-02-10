@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Theme_park</title>
+</head>
+<body>
+    <div class="preloader">
+        <svg class="child_walking" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M95.0467 20.8441C98.9686 14.5003 107.859 9.5628 115.219 10.7816C123.469 12.1409 127.89 18.0784 129.062 25.6097C129.484 28.3441 129.406 31.0628 128.937 32.9847C128.875 33.2191 128.422 34.8909 128.39 35.4222C128.078 37.4534 132.015 39.469 132.469 41.7034C132.812 43.3909 129.297 44.469 129.015 44.7659C127.64 46.2815 129.812 53.4847 120.172 54.2034C116.469 54.4847 117.187 54.2503 116.094 54.6722C114.39 55.3284 114.547 59.8597 114.547 59.8597C114.547 59.8597 113.594 67.3284 107.219 65.344C99.9373 63.094 99.6561 57.9378 99.6561 57.9378C99.6561 57.9378 102.359 50.7503 98.0154 43.2815C94.5623 37.3128 92.5154 24.9222 95.0467 20.8441V20.8441Z" fill="#F9DDBD"/>
+            <path d="M128.046 48.7966C126.702 48.8747 125.389 48.5622 124.249 47.7185C123.014 46.7966 123.858 45.7809 125.28 46.3747C126.139 46.7341 127.343 46.9216 128.436 46.7184L128.046 48.7966V48.7966Z" fill="#444444"/>
+            <path d="M122.337 39.2657C121.362 39.2348 120.611 37.9932 120.658 36.4924C120.706 34.9917 121.534 33.8001 122.509 33.8309C123.484 33.8617 124.235 35.1033 124.188 36.6041C124.14 38.1049 123.312 39.2965 122.337 39.2657Z" fill="#312D2D"/>
+            <path d="M123.798 32.532C125.548 32.9382 125.891 31.782 125.266 30.907C124.813 30.2507 123.735 29.7507 121.751 30.2507C119.876 30.7195 119.157 31.8601 118.673 32.5476C118.188 33.2351 118.298 33.8913 118.735 33.9382C119.329 33.9695 121.641 32.032 123.798 32.532Z" fill="#454140"/>
+            <path class="leg_left" d="M66.7813 169.81L88.7656 144.731C90.1406 143.169 90.9531 141.2 91.0781 139.122L93.2344 104.028L117.453 106.7L109.828 142.903C108.594 148.763 105.297 153.981 100.547 157.622L74.7813 177.31L66.7813 169.81V169.81Z" fill="#616161"/>
+            <path class="leg_right" d="M93.5159 98.2485L120.985 100.764L128.063 132.624C129.36 138.499 129.813 144.545 129.391 150.545L126.844 186.858H116.422L111.813 147.749C111.813 147.749 103.985 126.936 103.735 126.811C97.3753 123.795 91.8753 119.124 92.1566 111.452C92.2972 107.045 93.0159 102.608 93.5159 98.2485V98.2485Z" fill="#7C7C7C"/>
+            <path d="M98.6106 114.857H117.204C120.751 114.857 123.642 111.451 123.642 107.263L120.282 72.1072C119.595 65.6853 116.329 59.4665 113.048 57.1228C109.97 54.9197 105.517 54.5603 105.517 54.5603C103.126 54.3728 99.5793 54.9509 97.3137 58.2634C95.9543 60.2478 94.9387 64.1228 94.72 67.4509L92.1887 107.263C92.1887 111.467 95.0637 114.857 98.6106 114.857Z" fill="url(#paint0_linear)"/>
+            <path d="M95.6263 94.2046L99.142 72.5952L110.033 74.3608L106.673 94.9702L112.251 110.345C112.611 111.048 117.658 113.33 117.97 113.486C118.939 113.955 119.611 114.876 120.111 116.705C120.408 117.83 121.158 121.048 119.579 121.611C120.111 123.095 119.767 124.955 119.361 125.392C118.423 126.408 117.283 125.955 117.283 125.955C117.283 125.955 117.126 127.251 116.095 127.611C114.814 128.064 113.923 127.361 113.923 127.361C113.47 127.705 112.923 127.892 112.345 127.892C111.658 127.892 111.048 127.626 110.579 127.283C110.283 127.408 109.47 127.892 108.439 127.158C107.783 126.689 105.72 123.986 105.079 122.251C104.642 121.064 104.704 115.095 104.158 114.048C103.611 113.001 96.1263 98.1108 96.1263 98.1108H96.142C95.4701 96.8765 95.3138 95.4858 95.6263 94.2046V94.2046Z" fill="url(#paint1_linear)"/>
+            <path d="M107.999 122.972C108.358 122.034 108.592 121.972 109.249 122.144C110.139 122.378 111.108 122.347 111.655 121.253C111.78 120.987 111.967 120.894 112.249 120.987C113.202 121.3 114.389 121.315 114.796 119.878C114.952 119.347 115.171 119.284 115.749 119.284C115.936 119.284 116.483 119.519 117.046 118.925C117.671 118.253 116.827 116.909 117.624 116.784C117.858 116.753 118.983 116.878 119.327 115.675C119.546 114.894 118.639 113.956 118.624 113.94C119.249 114.487 119.733 115.347 120.092 116.722C120.389 117.847 121.139 121.065 119.561 121.628C120.092 123.112 119.749 124.972 119.342 125.409C118.405 126.425 117.264 125.972 117.264 125.972C117.264 125.972 117.108 127.269 116.077 127.628C114.796 128.081 113.905 127.378 113.905 127.378C113.452 127.722 112.905 127.909 112.327 127.909C111.639 127.909 111.03 127.644 110.561 127.3C110.264 127.425 109.452 127.909 108.421 127.175C107.874 126.784 106.327 124.8 105.467 123.144C106.233 123.753 107.733 123.675 107.999 122.972V122.972Z" fill="url(#paint2_linear)"/>
+            <path class="leg_right" d="M114.688 193.72C113.703 193.72 112.891 192.923 112.891 191.923V187.548C112.891 184.58 115.906 181.189 115.906 181.189H126.813L136.625 184.423C139 185.361 140.578 187.642 140.594 190.189L140.61 192.158C140.61 193.017 139.906 193.72 139.047 193.72H114.688Z" fill="#4568AD"/>
+            <path class="leg_left" d="M59.9227 174.748C59.2196 174.045 59.2196 172.92 59.9227 172.217L63.0164 169.123C65.1258 167.014 69.6414 166.748 69.6414 166.748L77.3446 174.451L81.9852 183.686C83.0008 186.029 82.5008 188.748 80.7039 190.576L79.3133 191.982C78.7039 192.592 77.7039 192.592 77.0945 191.982L59.9227 174.748V174.748Z" fill="#325599"/>
+            <path d="M108.797 124.048C108.688 124.813 108.891 125.392 109.172 125.954C109.485 126.485 109.86 126.97 110.563 127.298C110.672 126.532 110.469 125.954 110.188 125.392C109.891 124.86 109.5 124.376 108.797 124.048Z" fill="#EDBD82"/>
+            <path d="M111.953 122.625C111.844 123.61 112.063 124.485 112.375 125.313C112.719 126.125 113.125 126.922 113.891 127.563C114 126.563 113.781 125.704 113.469 124.875C113.125 124.079 112.703 123.282 111.953 122.625Z" fill="#EDBD82"/>
+            <path d="M115.704 121.063C115.517 122.032 115.673 122.907 115.907 123.75C116.173 124.579 116.532 125.391 117.235 126.094C117.423 125.125 117.267 124.25 117.032 123.407C116.751 122.579 116.392 121.766 115.704 121.063Z" fill="#EDBD82"/>
+            <path d="M115.939 115.436C116.423 115.858 116.892 116.295 117.282 116.764C117.704 117.233 117.907 117.655 118.048 118.264C118.407 119.42 118.767 120.624 119.61 121.733C119.86 120.374 119.61 119.092 119.095 117.874C118.829 117.28 118.314 116.592 117.751 116.249C117.173 115.858 116.564 115.592 115.939 115.436V115.436Z" fill="#EDBD82"/>
+            <path d="M111.875 82.8135L94.8435 79.7197L97.5935 64.5791C97.7964 63.4607 98.2177 62.3933 98.8332 61.4377C99.4488 60.4822 100.247 59.6572 101.181 59.0101C102.115 58.3629 103.168 57.9062 104.279 57.6661C105.39 57.4259 106.538 57.407 107.656 57.6104C108.774 57.8133 109.842 58.2345 110.797 58.8501C111.753 59.4657 112.578 60.2635 113.225 61.1979C113.872 62.1323 114.329 63.1851 114.569 64.2961C114.809 65.4071 114.828 66.5546 114.625 67.6729L111.875 82.8135Z" fill="#ED6D23"/>
+            <path d="M89.5952 21.1405C91.6577 15.9686 95.8452 14.4061 97.2202 14.0311C97.8609 12.1561 101.111 5.04677 112.845 6.98427C115.705 7.45302 117.798 8.81239 119.642 10.0155C120.423 10.5311 121.173 11.0311 121.876 11.3593C122.455 11.6249 123.455 11.8749 124.283 11.6093C126.173 10.9843 125.58 8.10927 125.58 8.10927C125.58 8.10927 132.517 9.48427 129.533 16.1874C131.861 17.2186 132.939 19.6874 133.345 22.0155C133.908 25.1874 132.361 28.203 129.314 29.5624C129.314 29.5624 129.923 24.4686 122.564 24.7655C120.283 24.8593 117.892 25.2186 115.783 24.3593C114.97 24.0311 114.22 23.5155 113.439 23.1405H113.158C110.376 24.6249 114.033 31.203 110.939 35.0468C110.33 35.8124 109.814 35.5311 109.814 35.5311L108.58 33.703C107.642 32.453 106.783 31.3593 105.611 31.6249C102.142 32.3905 102.767 38.578 106.876 39.9374C107.283 40.078 106.33 46.9686 97.814 46.9686C93.4077 46.9686 91.8609 43.3124 91.8609 43.3124C91.8609 43.3124 93.7359 43.7811 94.1421 42.1874C94.3609 41.3593 93.5952 40.2343 92.2202 39.0155C88.2515 35.4843 89.689 31.4218 90.2671 30.1561C89.6421 28.9686 87.9859 25.1874 89.5952 21.1405V21.1405Z" fill="#312D2D"/>
+            <path d="M90.2524 30.1431C90.1743 30.0024 91.4868 33.2837 97.1118 32.7368C99.4243 32.7368 102.643 38.3149 99.268 42.0024C96.268 45.2524 91.8462 43.2993 91.8462 43.2993C91.8462 43.2993 92.4555 43.4712 93.3462 43.1743C93.9243 42.9712 94.1274 42.2212 94.1274 42.1743C94.3462 41.3462 93.5805 40.2212 92.2055 39.0024C88.2368 35.4556 89.6743 31.4087 90.2524 30.1431V30.1431Z" fill="url(#paint3_radial)"/>
+            <path d="M89.5957 21.1411C90.6738 18.4224 92.6582 16.1255 95.2832 14.7974C95.6582 14.6099 96.5957 14.1567 97.2363 14.0317C96.9238 15.2349 96.9551 16.5317 97.4707 17.8599C97.4863 17.9067 98.0801 19.8911 99.7832 21.4692C98.5488 23.188 97.9238 25.2661 97.3301 27.313C96.8145 29.0942 96.3145 31.063 97.1113 32.7349C96.0332 32.6724 94.3145 32.9692 92.4238 32.1255C90.6113 31.313 89.6582 29.2192 89.2207 27.3442C88.7363 25.2974 88.8144 23.1255 89.5957 21.1411V21.1411Z" fill="url(#paint4_radial)"/>
+            <path d="M97.4856 17.8727C96.1262 14.3883 98.0481 11.1696 100.939 9.02895C104.345 6.51332 108.814 6.32582 112.845 6.98207C115.704 7.45082 117.798 8.8102 119.642 10.0133C120.439 10.5289 121.189 11.0133 121.892 11.3571C122.47 11.6227 123.47 11.8727 124.298 11.6071C126.189 10.9821 125.595 8.10707 125.595 8.10707C125.595 8.10707 132.532 9.48207 129.548 16.1852C131.876 17.2164 132.954 19.6852 133.361 22.0133C133.923 25.1852 132.376 28.2008 129.329 29.5602C129.329 29.5602 129.939 24.4664 122.579 24.7633C120.298 24.8571 117.907 25.2164 115.798 24.3571C113.923 23.6071 113.298 22.5914 111.189 22.7008C108.923 22.8258 105.907 23.6852 103.579 23.3258C98.8762 22.6071 97.5012 17.9352 97.4856 17.8727V17.8727Z" fill="url(#paint5_radial)"/>
+            <path d="M99.2657 42C100.781 40.3906 101.188 37.7344 103.563 36.3281C104 37.875 105.109 39.3281 106.875 39.9219C107.281 40.0625 106.328 46.9531 97.8126 46.9531C93.4063 46.9531 91.8594 43.2969 91.8594 43.2969C91.8594 43.2969 96.2188 45.2344 99.2657 42V42Z" fill="url(#paint6_radial)"/>
+            <defs>
+            <linearGradient id="paint0_linear" x1="118.951" y1="78.6853" x2="91.9981" y2="97.4353" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#F78C1F"/>
+            <stop offset="0.482" stop-color="#F47F12"/>
+            <stop offset="1" stop-color="#EF6C00"/>
+            </linearGradient>
+            <linearGradient id="paint1_linear" x1="107.503" y1="109.975" x2="112.494" y2="80.7171" gradientUnits="userSpaceOnUse">
+            <stop offset="0.461" stop-color="#F9DDBD"/>
+            <stop offset="1" stop-color="#FFD29C"/>
+            </linearGradient>
+            <linearGradient id="paint2_linear" x1="116.664" y1="129.942" x2="113.153" y2="120.797" gradientUnits="userSpaceOnUse">
+            <stop offset="0.456" stop-color="#F9DDBD"/>
+            <stop offset="1" stop-color="#FFD29C"/>
+            </linearGradient>
+            <radialGradient id="paint3_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(100.889 38.2759) rotate(159.738) scale(11.1279 16.0261)">
+            <stop offset="0.45" stop-color="#454140" stop-opacity="0"/>
+            <stop offset="1" stop-color="#454140"/>
+            </radialGradient>
+            <radialGradient id="paint4_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(99.5724 27.0562) rotate(-172.276) scale(11.2794 14.2333)">
+            <stop offset="0.45" stop-color="#454140" stop-opacity="0"/>
+            <stop offset="1" stop-color="#454140"/>
+            </radialGradient>
+            <radialGradient id="paint5_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(112.148 23.1619) rotate(-171.176) scale(23.2164 17.4511)">
+            <stop offset="0.45" stop-color="#454140" stop-opacity="0"/>
+            <stop offset="1" stop-color="#454140"/>
+            </radialGradient>
+            <radialGradient id="paint6_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(98.3176 39.6365) rotate(165.741) scale(12.4985 8.03517)">
+            <stop offset="0.45" stop-color="#454140" stop-opacity="0"/>
+            <stop offset="1" stop-color="#454140"/>
+            </radialGradient>
+            </defs>
+        </svg>
+        <svg class="door" width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0)">
+            <path d="M64.2537 300.706H237.283C238.699 300.706 239.908 298.653 239.908 296.295V116.858V14.2294C239.908 11.8481 238.699 9.83252 237.283 9.83252H64.2537C63.4708 9.83252 62.8849 10.3013 62.4771 11.0325C62.4771 11.0325 62.4724 11.0888 62.4115 11.145C62.4115 11.145 62.374 11.2294 62.3177 11.3185C61.9005 11.9606 61.6287 12.9169 61.6287 14.2294V296.328C61.6287 298.69 62.8333 300.739 64.2537 300.739" fill="#3C9662"/>
+            <path d="M74.0529 18.5485H229.8C231.075 18.5485 232.158 20.536 232.158 22.8282V197.016V296.625C232.158 298.936 231.08 300.891 229.8 300.891H74.0529C73.3545 300.891 72.8201 300.431 72.4545 299.719C72.4545 299.719 72.4498 299.667 72.3982 299.616C72.3982 299.616 72.3607 299.527 72.3092 299.447C71.9342 298.814 71.6904 297.886 71.6904 296.625V22.8422C71.6904 20.5454 72.7732 18.5625 74.0529 18.5625" fill="#41A56E"/>
+            <path d="M85.5872 133.647H149.023C149.558 133.647 149.993 132.972 149.993 132.175V71.8518V37.3518C149.993 36.5502 149.558 35.8799 149.023 35.8799H85.5825C85.3013 35.8799 85.081 36.0346 84.9357 36.2783C84.9357 36.2783 84.9169 36.2877 84.9169 36.3111L84.8794 36.3674C84.6914 36.6598 84.6027 37.005 84.6263 37.3518V132.175C84.6357 132.977 85.0716 133.647 85.5872 133.647" fill="#3C9662"/>
+            <path d="M82.4287 284.81H145.86C146.404 284.81 146.83 284.093 146.83 283.249V219.907V183.678C146.83 182.843 146.404 182.117 145.86 182.117H82.424C82.1428 182.117 81.9178 182.281 81.7725 182.553C81.7725 182.553 81.7537 182.571 81.7537 182.59C81.7537 182.59 81.735 182.609 81.7162 182.646C81.5275 182.958 81.4391 183.319 81.4631 183.682V283.249C81.4631 284.089 81.9037 284.81 82.4287 284.81" fill="#3C9662"/>
+            <path d="M88.7691 263.763H139.53C139.966 263.763 140.313 263.219 140.313 262.614V215.646V188.782C140.313 188.153 139.966 187.628 139.53 187.628H88.7738C88.666 187.628 88.56 187.657 88.4675 187.712C88.3749 187.768 88.2993 187.847 88.2488 187.942L88.2394 187.98C88.2394 187.98 88.2207 187.989 88.2113 188.017C88.0754 188.182 88.0051 188.435 88.0051 188.782V262.638C87.9957 263.233 88.3519 263.782 88.7691 263.782" fill="#55C688"/>
+            <path d="M160.546 284.81H223.977C224.521 284.81 224.947 284.093 224.947 283.249V219.907V183.678C224.947 182.843 224.521 182.117 223.977 182.117H160.541C160.26 182.117 160.035 182.281 159.885 182.553C159.885 182.553 159.866 182.571 159.866 182.59C159.866 182.59 159.847 182.609 159.828 182.646C159.642 182.958 159.554 183.319 159.575 183.682V283.249C159.585 284.089 160.021 284.81 160.546 284.81" fill="#3C9662"/>
+            <path d="M166.873 263.763H217.634C218.07 263.763 218.412 263.219 218.412 262.614V215.646V188.782C218.412 188.153 218.07 187.628 217.634 187.628H166.873C166.765 187.629 166.66 187.658 166.567 187.714C166.475 187.769 166.399 187.848 166.348 187.942L166.339 187.98C166.339 187.98 166.32 187.989 166.31 188.017C166.179 188.182 166.104 188.435 166.104 188.782V262.638C166.104 263.233 166.456 263.782 166.873 263.782" fill="#55C688"/>
+            <path d="M90.327 121.059H144.304C144.758 121.059 145.129 120.478 145.129 119.798V68.475V39.1312C145.129 38.4469 144.758 37.875 144.304 37.875H90.3082C90.1951 37.8748 90.0841 37.9063 89.988 37.9659C89.8919 38.0256 89.8144 38.111 89.7645 38.2125C89.7645 38.2125 89.7457 38.2266 89.7457 38.25L89.7176 38.3016C89.5723 38.475 89.502 38.7562 89.502 39.1312V119.798C89.502 120.478 89.8723 121.059 90.3082 121.059" fill="#55C688"/>
+            <path d="M160.545 133.647H223.986C224.52 133.647 224.956 132.972 224.956 132.175V71.8518V37.3518C224.956 36.5502 224.52 35.8799 223.986 35.8799H160.54C160.259 35.8799 160.044 36.0346 159.894 36.2783C159.894 36.2783 159.875 36.2877 159.875 36.3111L159.837 36.3674C159.651 36.6607 159.563 37.0052 159.584 37.3518V132.175C159.594 132.977 160.029 133.647 160.545 133.647Z" fill="#3C9662"/>
+            <path d="M165.281 121.059H219.263C219.717 121.059 220.088 120.478 220.088 119.798V68.475V39.1312C220.088 38.4469 219.717 37.875 219.263 37.875H165.267C165.154 37.8748 165.043 37.9063 164.947 37.9659C164.851 38.0256 164.773 38.111 164.723 38.2125C164.723 38.2125 164.705 38.2266 164.705 38.25L164.677 38.3016C164.536 38.475 164.461 38.7562 164.461 39.1312V119.798C164.461 120.478 164.827 121.059 165.263 121.059" fill="#55C688"/>
+            </g>
+            <defs>
+            <clipPath id="clip0">
+            <rect width="300" height="300" fill="white"/>
+            </clipPath>
+            </defs>
+        </svg>
+        <p>Please wait while we load everything for you...</p>
+    </div>
+
+	<header>
+        <div class="header">
+        </div>
+            <a href="./index.html"><img class="logo" src="./Images/Logo.png" alt=""></a>
+            <div class="header_content">
+                <button class="book">Book for Today</button>
+                <div class="burger">
+                    <div class="lines"></div>
+                    <div class="lines"></div>
+                    <div class="lines"></div>
+                </div>
+            </div>
+                <nav>
+                    <ul class="links">
+                        <li class="group"><a href="group.html">Groups & Picnics</a>
+                        </li>
+                        <li class="rides"><a href="rides.html">Rides</a>
+                        </li>
+                        <li class="events"><a href="event.html">Events</a>
+                        </li>
+                        <li class="tcket"><a href="ticket.html">Tickets</a>
+                        </li>
+                        <li class="ssn_pass"><a href="seasonpass.html">Season Pass</a>
+                        </li>
+                        <li class="parkmap">
+                            <a href="./theme_park_map.pdf" target="_blank">Park Map</a>
+                        </li>
+                        <li class="locateus">
+                            <a>Directions</a>
+                        </li>
+                    </ul>
+                    <div class="contact_mail">
+                        <p>For any queries contact us</p>
+                        <li><a href="tel:+919086574213">9086574213</a></li>
+                        <li class="gmail">rdthemepark@gmail.com</li>
+                        <h2 class="covid">Due to covid we're allowing less number of persons to enjoy at our Theme Park.</h2>
+                    </div>
+                </nav>
+    </header>
+    
+    <a href="#">
+        <div class="move_top">
+            <svg width="30" height="42" viewBox="0 0 30 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.67473e-06 37.3219V41.5259C1.67473e-06 41.8903 0.485296 42.0916 0.813026 41.8686L29.2247 22.719C29.4661 22.5571 29.6614 22.3496 29.7958 22.1126C29.9302 21.8755 30 21.6151 30 21.3512C30 21.0873 29.9302 20.8269 29.7958 20.5899C29.6614 20.3528 29.4661 20.1454 29.2247 19.9834L0.813026 0.833872C0.478993 0.610887 1.67473e-06 0.812117 1.67473e-06 1.17651V5.3806C1.67473e-06 5.64709 0.144958 5.90271 0.384453 6.06587L23.0735 21.3485L0.384453 36.6366C0.144958 36.7997 1.67473e-06 37.0554 1.67473e-06 37.3219V37.3219Z" fill="var(--color-light)"/>
+            </svg>
+        </div>
+    </a> 
+
+    <section id="booking">
+            <div class="payment">
+            <div class="pay_options">
+                <header>
+                    <div class="userLogo">
+                        <span class="userLogospan">r</span>
+                    </div>
+                        <h6>Select payment Method</h6>
+                        <label>Amount to be payable : ₹ <span class="amtspan">1234</span></label>
+                    <div class="close">
+                        <div class="close_line"></div>
+                    </div>
+                </header>
+                <div class="card">
+                    <div>
+                        <img src="./Images/credit-card.png" alt="">
+                        <p>Cards(Credit/Debit)</p>
+                    </div>
+                    <img class="arrowImg a1" src="./Images/Arrow black.svg" alt="">
+                </div>
+                <div class="upi">
+                    <div>
+                        <img src="./Images/upi.svg" alt="">
+                        <p>UPI</p>
+                    </div>
+                    <img class="arrowImg a2" src="./Images/Arrow black.svg" alt="">
+                </div>
+                <div class="wallets">
+                    <div>
+                        <img src="./Images/wallet.png" alt="">
+                        <p>Wallets</p>
+                    </div>
+                    <img class="arrowImg a3" src="./Images/Arrow black.svg" alt="">
+                </div>
+                <div class="scan">
+                    <div>
+                        <img src="./Images/qr-code.png" alt="">
+                        <p>Scan QR</p>
+                    </div>
+                    <img class="arrowImg a4" src="./Images/Arrow black.svg" alt="">
+                </div>
+            </div>
+            </div>
+            <div id="clickhere">
+                <svg class="close_clickhere" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M36 5.1426L30.8574 0L18 12.8574L5.1426 0L0 5.1426L12.8574 18L0 30.8574L5.1426 36L18 23.1426L30.8574 36L36 30.8574L23.1426 18L36 5.1426Z" fill="black"/>
+                </svg>
+                <h2 class="sp_bg">Ticketing:</h2>
+                <ol>
+                    <li>This ticket is valid for a single entry and is non-refundable, non-transferrable and non- redeemable.</li>
+                    <li>
+                        On purchase of this ticket the holder confirms that he/she has read, understood and agreed to all the terms and conditions in the park and voluntarily assumed all the risks.
+                    </li>
+                    <li>
+                        Guests are requested to study various safety norms for all the rides and attractions and adhere to them in terms of height and medical conditions.
+                    </li>
+                    <li>
+                        Malpani Group will not be responsible for any loss, damage or injury sustained by the ticket holder, and persons accompanying him, while in the park.
+                    </li>
+                    <li>
+                        Ticket packages, rates and governing conditions are subject to change without notice.
+                    </li>
+                    <li>
+                        Malpani Group reserves the rights to refuse entry to holder of this ticket for violations of park rules, Illegal activity or failure to comply with any security measures.
+                    </li>
+                </ol>
+                <h2 class="sp_bg">The following articles are strictly prohibited:</h2>
+                <ol>
+                    <li>
+                        Arms & Ammunition, Eatables (including Guthka, Pan-Masala, Chewing Gum, Chocolate, Chips etc) and Cigarette Lighter, Knife, Match-Box, Firearms and all kind of Inflammable Objects
+                    </li>
+                    <li>
+                        Kindly retain the ticket and wrist band, until you leave the premises.
+                    </li>
+                    <li><b>
+                        Tickets are required as per height, Adult = (Above 4ft 6 inch) and Child = (3ft 3inch – 4ft 6inch). Free Entry for Children below 3ft 3inch.
+                    </b></li>
+                    <li>
+                        Senior Citizen must show their age proof to avail the special rates, as offered from time to time.
+                    </li>
+                    <li>
+                        Some attractions may be on a rotation basis and/or may be closed at any time, without notice at the discretion of park management or due to safety concerns.
+                    </li>
+                </ol>
+                <h2 class="sp_bg">GENERAL RULES AND REGULATIONS:</h2>
+                <ol>
+                    <li>
+                        Park your car / bike / bus in designated parking area.
+                    </li>
+                    <li>
+                        Follow the rules for the usage of the rides. Not following rules can lead to accident / injury.
+                    </li>
+                    <li>
+                        No outside food / beverages are allowed inside the park premises.
+                    </li>
+                    <li>Entry inside the park premises under the influence of alcohol or toxicant is not allowed. If found the guest shall not be allowed or asked to leave the park premises, without any refund / reimbursement.
+                    </li>
+                    <li>Alcoholic drinks / drugs strictly prohibited to be carried on person inside the premises. It is an offense.
+                    </li>
+                    <li>Please do not leave valuables unattended. The Park Management is not liable for the same at any given point of time.
+                    </li>
+                    <li>Amusement rides are body active participatory activities. Such activities present a risk of injury.
+                    </li>
+                    <li>Guests with any medical or health restrictions on their physical activity should not use Amusement Rides /Attractions.
+                    </li>
+                    <li>Look at each ride and see if you can safely participate - you are the best Judge of your limitations.
+                    </li>
+                    <li>Please supervise your children and arrange a meeting place in case you should get separated.
+                    </li>
+                    <li>Children under 12 years old must be accompanied by an adult.
+                    </li>
+                    <li>We reserve the right to stop you from taking pictures or recording videos.
+                    </li>
+                    <li>Smoking is not allowed inside the Park.
+                    </li>
+                    <li>Do not spit.
+                    </li>
+                    <li>Do not pluck flowers.
+                    </li>
+                    <li>Do not throw food / paper / plastic. Use garbage bins provided in the premises.
+                    </li>
+                    <li>Do not wash clothes in toilets.
+                    </li>
+                    <li>The area may be wet and slippery. Running around shall be risky.
+                    </li>
+                    <li>Do not splash water on unknown persons.
+                    </li>
+                    <li>Do not indulge in eve teasing / passing lewd remarks in front or to ladies and in presence of families. Security has rights to remove you from the premises, without giving you any reason whatsoever.
+                    </li>
+                    <li>Do not indulge in boisterous behaviour that will disturb other guests. Enjoy & let others enjoy.
+                    </li>
+                </ol>
+                <h2 class="sp_bg">DISCLAIMER:</h2>
+                <ol>
+                    <li>Theme Park may without prior notice and without refund or compensation change the operating hours of the park or attractions; close the Park or any part of it temporarily; restrict the number of persons having access to the park; suspend or cancel any attraction or entertainment program due to capacity constraints, inclement weather or special events to ensure safety, security and order if we consider that the circumstances so require
+                    </li>
+                    <li>Theme Park reserves the right to refuse admission to a guest if in the reasonable opinion of the staff, the presence of the guest may pose a risk to the safety of other guests and/or affect the enjoyment of others within the theme park facility and/or affect the normal operations of the theme park facility.
+                    </li>
+                    <li>Theme Park reserves the right to require a person already admitted to leave the Wet N Joy facility without refund or compensation for failure to comply with any of the park facility rules, for unsafe, illegal or offensive behaviour and to ensure safety, security and order, or if we consider that the circumstances so require.
+                    </li>
+                    <li>Theme Park reserves the right to require a person in the outer premises (Parking Lot, Security Buffer Zone, Ticketing Area, or directly outside of the park facility) to remove himself for failure to comply with any of the theme park facility rules, for unsafe, illegal or offensive behaviour, to ensure safety, security and order, or if we consider that the circumstances so require. If person(s) do not relocate voluntary, Theme park will contact local authorities to have person(s) removed on grounds of trespassing or a threat to the security of park operations.
+                    </li>
+                    <li>Theme Park reserves the right to introduce differential pricing during both normal and peak days for different customer groups. This includes but is not limited to groups, schools, complimentary guests, special interest groups, special needs guests, elderly guests or special offers and discounts.
+                    </li>
+                    <li>Theme Park reserves the right to refuse or deny any special discount offer. In any way or form in accordance with the terms and conditions that were posted when the special offer was posted.
+                    </li>
+                    <li>Theme Park is not responsible and does not assume any liability for any damage to, loss of, disappearance of, theft of, or any other form of alteration, physical or otherwise to personal property of any guest, whether such damage or loss is caused by our negligence or otherwise. The use of our facilities is at your own risk.
+                    </li>
+                    <li>Theme Park  is not responsible and does not assume any liability for any damage to, death, or any other form of injury, physical, mental or otherwise of any guest, whether such damage or loss is caused by our negligence or otherwise. The use of our facilities is at your own risk.
+                    </li>
+                    <li>Theme Park reserves the right to hold liable any guest who has caused any damage to, loss of, disappearance of, theft of, or any other form of alteration, physical or otherwise to Magic Mountain /Wet N Joy property if such event is caused by guest due to gross negligence or non-compliance of the rules and regulations as set forth in this document.</li>
+                </ol>
+            </div>
+            <h1 class="booking_title">Amusement park booking section</h1>
+            <div class="booking_track">
+                <div class="track">
+                    <div class="track1">
+                        <svg class="track1_date_svg" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9H4V11H6V9ZM10 9H8V11H10V9ZM14 9H12V11H14V9ZM16 2H15V0H13V2H5V0H3V2H2C0.89 2 0.00999999 2.9 0.00999999 4L0 18C0 18.5304 0.210714 19.0391 0.585786 19.4142C0.960859 19.7893 1.46957 20 2 20H16C17.1 20 18 19.1 18 18V4C18 2.9 17.1 2 16 2ZM16 18H2V7H16V18Z" fill="var(--color-light)"/>
+                        </svg>
+                        <p class="track1_date_text">Date</p>
+                    </div>
+                    <p class="track1after"></p>
+                    <div class="track2">
+                        <svg class="track2_ticket_svg" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 5.38L18.99 8.2V8.19C18.47 8 17.96 8.03 17.46 8.27C16.96 8.51 16.61 8.89 16.42 9.41C16.23 9.93 16.26 10.44 16.49 10.94C16.73 11.44 17.11 11.78 17.64 11.97V11.98L16.63 14.8L1.57 9.42L2.56 6.63C3.08 6.82 3.59 6.79 4.09 6.55C4.59 6.32 4.93 5.94 5.12 5.42C5.31 4.9 5.28 4.39 5.04 3.89C4.93064 3.65225 4.77407 3.43923 4.57981 3.26389C4.38555 3.08854 4.15767 2.95453 3.91 2.87L4.93 0L20 5.38ZM15.03 11.07L16.4 7.31C16.52 7 16.5 6.66 16.36 6.36C16.22 6.06 15.97 5.83 15.66 5.71L8.14 2.98C7.5 2.75 6.77 3.1 6.54 3.72L5.17 7.48C4.93 8.13 5.27 8.85 5.91 9.08L13.43 11.82C13.57 11.87 13.71 11.9 13.86 11.9C14.38 11.9 14.86 11.57 15.03 11.07V11.07ZM7.97 3.45L15.48 6.18C15.67 6.25 15.82 6.39 15.91 6.57C15.99 6.75 16 6.95 15.93 7.14L14.56 10.9C14.43 11.28 13.98 11.49 13.6 11.35L6.09 8.61C5.90307 8.5423 5.75067 8.40316 5.66629 8.22315C5.58191 8.04313 5.57245 7.83698 5.64 7.65L7.01 3.89C7.11 3.6 7.4 3.4 7.71 3.4C7.8 3.4 7.88 3.42 7.97 3.45V3.45ZM14.79 15.59C15.14 15.86 15.54 16 15.99 16H16V19H0V16.04C0.55 16.04 1.03 15.84 1.41 15.45C1.8 15.07 2 14.59 2 14.04C2 13.49 1.8 13.02 1.41 12.63C1.02 12.24 0.55 12.04 0 12.04V9H1.05L0.77 9.8L3.64 10.82C3.13 10.98 2.75 11.44 2.75 12V16C2.75 16.69 3.31 17.25 4 17.25H12C12.69 17.25 13.25 16.69 13.25 16V14.25L14.08 14.55C14.2 14.98 14.44 15.33 14.79 15.59ZM3.25 16V12C3.25 11.59 3.59 11.25 4 11.25H4.83L12.75 14.08V16C12.75 16.41 12.41 16.75 12 16.75H4C3.59 16.75 3.25 16.41 3.25 16Z" fill="var(--color-light)"/>
+                        </svg>
+                        <p class="track2_ticket_text">Tickets</p>
+                    </div>
+                    <p class="track2after"></p>
+                    <div class="track3">
+                        <svg class="track3_details_svg" width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 0H2C0.91 0.04 0.04 0.91 0 2V16C0.04 17.09 0.91 17.96 2 18H22C23.09 17.96 23.96 17.09 24 16V2C23.9816 1.47543 23.765 0.977343 23.3938 0.606185C23.0227 0.235027 22.5246 0.0184054 22 0ZM22 16H2V2H22V16ZM14 14V12.75C14 11.09 10.66 10.25 9 10.25C7.34 10.25 4 11.09 4 12.75V14H14ZM9 4C8.33696 4 7.70107 4.26339 7.23223 4.73223C6.76339 5.20107 6.5 5.83696 6.5 6.5C6.5 6.8283 6.56466 7.15339 6.6903 7.45671C6.81594 7.76002 7.00009 8.03562 7.23223 8.26777C7.70107 8.73661 8.33696 9 9 9C9.3283 9 9.65339 8.93534 9.95671 8.8097C10.26 8.68406 10.5356 8.49991 10.7678 8.26777C10.9999 8.03562 11.1841 7.76002 11.3097 7.45671C11.4353 7.15339 11.5 6.8283 11.5 6.5C11.5 6.1717 11.4353 5.84661 11.3097 5.54329C11.1841 5.23998 10.9999 4.96438 10.7678 4.73223C10.5356 4.50009 10.26 4.31594 9.95671 4.1903C9.65339 4.06466 9.3283 4 9 4V4ZM14 4V5H20V4H14ZM14 6V7H20V6H14ZM14 8V9H18V8H14Z" fill="var(--color-light)"/>
+                        </svg>
+                        <p class="track3_details_text">Details</p>
+                    </div>
+                    <p class="track3after"></p>
+                    <div class="track4">
+                        <svg class="track4_review_svg" width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.8912 5.54375C16.1965 2.23719 12.8415 0 8.99998 0C5.15842 0 1.80248 2.23875 0.108733 5.54406C0.037246 5.68547 0 5.8417 0 6.00016C0 6.15861 0.037246 6.31484 0.108733 6.45625C1.80342 9.76281 5.15842 12 8.99998 12C12.8415 12 16.1975 9.76125 17.8912 6.45594C17.9627 6.31453 18 6.1583 18 5.99984C18 5.84139 17.9627 5.68516 17.8912 5.54375V5.54375ZM8.99998 10.5C8.10997 10.5 7.23994 10.2361 6.49992 9.74161C5.7599 9.24715 5.18312 8.54434 4.84253 7.72208C4.50193 6.89981 4.41282 5.99501 4.58645 5.12209C4.76008 4.24918 5.18867 3.44736 5.818 2.81802C6.44734 2.18868 7.24916 1.7601 8.12208 1.58647C8.99499 1.41283 9.89979 1.50195 10.7221 1.84254C11.5443 2.18314 12.2471 2.75991 12.7416 3.49993C13.2361 4.23995 13.5 5.10998 13.5 6C13.5003 6.59103 13.3841 7.17632 13.158 7.72242C12.932 8.26851 12.6005 8.7647 12.1826 9.18262C11.7647 9.60054 11.2685 9.932 10.7224 10.158C10.1763 10.3841 9.59101 10.5003 8.99998 10.5V10.5ZM8.99998 3C8.73221 3.00374 8.46617 3.04358 8.20905 3.11844C8.42099 3.40646 8.5227 3.7609 8.49572 4.11748C8.46875 4.47406 8.31487 4.80917 8.06201 5.06203C7.80915 5.31489 7.47405 5.46876 7.11747 5.49574C6.76088 5.52271 6.40644 5.42101 6.11842 5.20906C5.95441 5.81331 5.98402 6.45377 6.20307 7.04031C6.42213 7.62685 6.8196 8.12993 7.33955 8.47874C7.8595 8.82754 8.47574 9.00452 9.10153 8.98475C9.72733 8.96498 10.3312 8.74946 10.8281 8.36853C11.325 7.9876 11.6899 7.46044 11.8715 6.86125C12.0531 6.26205 12.0422 5.62099 11.8404 5.0283C11.6386 4.43561 11.256 3.92114 10.7464 3.55728C10.2369 3.19343 9.62609 2.99853 8.99998 3V3Z" fill="var(--color-light)"/>
+                        </svg>
+                        <p class="track4_review_text">Review</p>
+                    </div>
+                </div>
+                <div class="form_2">
+                    <div class="form2_content">
+                        <div class="adult">
+                            <span class="ticket_type">Adult Ticket</span>
+                            <div class="count">
+                                <span class="adult_minus">-</span>
+                                <input type="text" class="adult_count input" value="0">
+                                <span class="adult_plus">+</span>
+                            </div>
+                            <span class="adult_price">0</span>
+                        </div>
+                        <div class="child">
+                            <span class="ticket_type">Child Ticket</span>
+                            <div class="count">
+                                <span class="child_minus">-</span>
+                                <input type="text" class="child_count input" value="0">
+                                <span class="child_plus">+</span>
+                            </div>
+                            <span class="child_price">0</span>
+                        </div>
+                        <div class="elder">
+                            <span class="ticket_type">Elder Ticket</span>
+                            <div class="count">
+                                <span class="elder_minus">-</span>
+                                <input type="text" class="elder_count input" value="0">
+                                <span class="elder_plus">+</span>
+                            </div>
+                            <span class="elder_price">0</span>
+                        </div>
+                    </div>
+                    <div class="form_buttns">
+                        <button class="btn form_2_prev">Previous</button>
+                        <button class="btn form_2_next">Next</button>
+                    </div>
+                </div>
+                <div class="form_3">
+                    <div class="dynamic d_name">
+                        <label for="input1" class="_input_label1">Name</label>
+                        <input type="text" name="input_name" id="input1" class="input" placeholder="Enter your name">
+                        <button class="btn_name dynamic_next">
+                            <img src="./Images/Arrow.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="dynamic d_email">
+                        <button class="btn_emailprev dynamic_prev">
+                            <img src="./Images/Vector.svg" alt="">
+                        </button>
+                        <label for="input2" class="_input_label2">Email</label>
+                        <input type="email" name="input_email" id="input2" class="input" placeholder="Enter your E-mail">
+                        <button class="btn_email dynamic_next">
+                            <img src="./Images/Arrow.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="dynamic d_phone">
+                        <button class="btn_phoneprev dynamic_prev">
+                            <img src="./Images/Vector.svg" alt="">
+                        </button>
+                        <label for="input3" class="_input_label3">Phone</label>
+                        <input type="number" name="input_phone" id="input3" class="input" placeholder="Enter your number">
+                        <button class="btn_phone dynamic_next">
+                            <img src="./Images/Arrow.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="dynamic d_city">
+                        <button class="btn_cityprev dynamic_prev">
+                            <img src="./Images/Vector.svg" alt="">
+                        </button>
+                        <label for="input4" class="_input_label4">City</label>
+                        <input type="text" name="input_city" id="input4" class="input" placeholder="Enter your city">
+                        <button class="btn_city dynamic_next">
+                            <img src="./Images/Arrow.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="dynamic d_bookingdate">
+                        <button class="btn_bdprev dynamic_prev">
+                            <img src="./Images/Vector.svg" alt="">
+                        </button>
+                        <label for="input5" class="_input_label5">Date of birth</label>
+                        <input type="date" name="input_bookingdate" id="input5" class="input" placeholder="Enter your DOB">
+                    </div>
+                    <div class="form_buttns">
+                        <button class="btn form_3_prev">Previous</button>
+                        <button class="btn form_3_next">Next</button>
+                    </div>
+                </div>
+                <div class="form_4">
+                    <div class="form4_content">
+                        <h3>Booking Details</h3>
+                        <div class="booking_form_details">
+                            <div class="left_side">
+                                <label for="name">Name : 
+                                    <span id="name">user name</span>
+                                </label>
+                                <label for="email">E-mail : 
+                                    <span id="email">user email</span>
+                                </label>
+                                <label for="number">Number : 
+                                    <span id="number">user number</span>
+                                </label>
+                                <label for="city">City : 
+                                    <span id="city">user city</span>
+                                </label>
+                                <label for="bdate">Booking Date : 
+                                    <span id="bdate">user booking date</span>
+                                </label>
+                            </div>
+                            <div class="right_side">
+                                <label for="atkt">Adult Tickets : 
+                                    <span id="atkt">user aticket</span>
+                                </label>
+                                <label for="ctkt">Child Tickets : 
+                                    <span id="ctkt">user cticket</span>
+                                </label>
+                                <label for="etkt">Elder Tickets : 
+                                    <span id="etkt">user eticket</span>
+                                </label>
+                                <div class="coupancode">
+                                    <input type="text" name="coupan" id="coupan"
+                                    placeholder="coupan code">
+                                    <button class="btn applycoupan">Apply</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="amount">
+                            <label for="amt">Amount : 
+                                <span id="amt"></span>
+                            </label>
+                            <label for="gst">GST(18%) : 
+                                <span id="gst"></span>
+                            </label>
+                            <label for="ttl">Total Amount : 
+                                <span id="ttl"></span>
+                            </label>
+                        </div>
+                        <div class="terms">
+                            <input type="checkbox" name="terms" id="terms">
+                            <p>I Accept Tearms and Conditions</p>
+                            <a class="clickhere">Click here</a>
+                        </div>
+                    </div>
+                    <div class="form_buttns">
+                        <button class="btn form_4_prev">Previous</button>
+                        <button class="btn form_4_next">Confirm & pay</button>
+                    </div>
+                </div>
+            </div>
+    </section>
+    
+    <section id="main">
+        <section class="class_img">
+            <div class="main_img">
+                <img src="./Images/main_imag.jpeg" alt="">                          
+                <div class="caption">
+                    <p>Bring your
+                        <b>family</b> and <b>friends</b> over for
+                        an incredible
+                        <b>adventure</b> and
+                        <b>journey</b>.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="ticket_pass">
+            <a href="./ticket.html"><div class="ticket">
+                <div class="img"></div>
+                <p class="desc">Grab your Fun now..</p>
+            </div></a>
+            <a href="./seasonpass.html"><div class="season_pass">
+                <div class="img"></div>
+                <p class="desc">Enjoy your whole summer with us..</p>
+            </div></a>
+        </section>
+        <section class="quick_info">
+            <h1 class="qi_title">Quick Info</h1>   
+            <section class="qi_icons">
+                <section id="qi_safety">
+                    <div>
+                        <img src="./Images/safety.svg" alt="" class="front_img">
+                        <img src="./Images/Safety_hover.png" alt="" class="bg_img">
+                    </div>
+                    <p class="title">Safety Measures</p>
+                </section>  
+
+                <section id="qi_exp">
+                    <div>
+                        <img src="./Images/experience.svg" alt="" class="front_img">
+                        <img src="./Images/Experience_hover.png" alt="" class="bg_img">                
+                    </div>
+                    <p class="title">Unforgetable Experience</p>
+                </section>
+
+                <section id="qi_rides">
+                    <div>
+                        <img src="./Images/rides.svg" alt="" class="front_img">
+                        <img src="./Images/Ride_hover.png" alt="" class="bg_img">           
+                    </div>
+                    <p class="title">Rides for all Ages</p>
+                </section>     
+
+                <section id="qi_event">
+                    <div>
+                        <img src="./Images/events.svg" alt="" class="front_img">
+                        <img src="./Images/Event_hover.png" alt="" class="bg_img">
+                    </div>
+                    <p class="title">Entertaining Events</p>
+                </section>
+                
+                <section id="qi_shop">
+                    <div>
+                        <img src="./Images/shopping.svg" alt="" class="front_img">
+                        <img src="./Images/Shop_hover.png" alt="" class="bg_img">
+                    </div>
+                    <p class="title">Shopping Area</p>
+                </section>
+
+                <section id="qi_resto">
+                    <div>
+                        <img src="./Images/restaurant.svg" alt="" class="front_img">
+                        <img src="./Images/Food_hover.png" alt="" class="bg_img">
+                    </div>
+                    <p class="title">Themed Restaurants</p>
+                </section>
+            </section>
+        </section>
+        <div class="animated_img">
+                <img src="./Images/animated_Image.jpg" alt="">
+        </div>
+    </section>
+
+    <footer>
+        <img class="footer_logo" src="./Images/Logo.png" alt="">
+        <div class="left_content">
+            <div class="social_links responsive">
+                <button class="ig"><a href="https://instagram.com" target="_blank">
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.4966 8.3314C10.2014 8.3314 8.32828 10.2045 8.32828 12.4998C8.32828 14.795 10.2014 16.6681 12.4966 16.6681C14.7919 16.6681 16.665 14.795 16.665 12.4998C16.665 10.2045 14.7919 8.3314 12.4966 8.3314ZM24.9986 12.4998C24.9986 10.7736 25.0142 9.06313 24.9173 7.34013C24.8204 5.33881 24.3638 3.56265 22.9004 2.09918C21.4338 0.632595 19.6607 0.179172 17.6594 0.0822335C15.9333 -0.0147052 14.2228 0.000930124 12.4998 0.000930124C10.7736 0.000930124 9.06313 -0.0147052 7.34013 0.0822335C5.33881 0.179172 3.56265 0.635722 2.09918 2.09918C0.632595 3.56577 0.179172 5.33881 0.0822335 7.34013C-0.0147052 9.06626 0.000930124 10.7768 0.000930124 12.4998C0.000930124 14.2228 -0.0147052 15.9364 0.0822335 17.6594C0.179172 19.6607 0.635722 21.4369 2.09918 22.9004C3.56577 24.3669 5.33881 24.8204 7.34013 24.9173C9.06626 25.0142 10.7768 24.9986 12.4998 24.9986C14.2259 24.9986 15.9364 25.0142 17.6594 24.9173C19.6607 24.8204 21.4369 24.3638 22.9004 22.9004C24.3669 21.4338 24.8204 19.6607 24.9173 17.6594C25.0174 15.9364 24.9986 14.2259 24.9986 12.4998V12.4998ZM12.4966 18.9134C8.94743 18.9134 6.08305 16.049 6.08305 12.4998C6.08305 8.95056 8.94743 6.08618 12.4966 6.08618C16.0458 6.08618 18.9102 8.95056 18.9102 12.4998C18.9102 16.049 16.0458 18.9134 12.4966 18.9134ZM19.1729 7.32137C18.3442 7.32137 17.675 6.65218 17.675 5.82351C17.675 4.99484 18.3442 4.32565 19.1729 4.32565C20.0016 4.32565 20.6708 4.99484 20.6708 5.82351C20.671 6.02028 20.6324 6.21516 20.5572 6.397C20.4821 6.57884 20.3717 6.74407 20.2326 6.8832C20.0935 7.02234 19.9282 7.13266 19.7464 7.20785C19.5646 7.28304 19.3697 7.32161 19.1729 7.32137V7.32137Z" fill="black"/>
+                    </svg></a>
+                </button>
+                <button class="fb"><a href="https://facebook.com" target="_blank">
+                    <svg width="25" height="25" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 0H1C0.734784 0 0.48043 0.105357 0.292893 0.292893C0.105357 0.48043 0 0.734784 0 1V17C0 17.2652 0.105357 17.5196 0.292893 17.7071C0.48043 17.8946 0.734784 18 1 18H9.615V11.04H7.277V8.315H9.615V6.315C9.615 3.99 11.035 2.723 13.115 2.723C13.814 2.721 14.514 2.757 15.21 2.83V5.25H13.775C12.647 5.25 12.427 5.788 12.427 6.575V8.31H15.124L14.774 11.035H12.426V18H17C17.2652 18 17.5196 17.8946 17.7071 17.7071C17.8946 17.5196 18 17.2652 18 17V1C18 0.734784 17.8946 0.48043 17.7071 0.292893C17.5196 0.105357 17.2652 0 17 0V0Z" fill="var(--color-black)"/>
+                </svg></a>
+                </button>
+                <button class="tw"><a href="https://twitter.com" target="_blank">
+                    <svg width="28" height="28" viewBox="0 0 35 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M34.4694 3.31668C33.5095 4.74444 32.3319 5.96153 30.9365 6.96796C30.9503 7.23788 30.9572 7.54296 30.9572 7.8832C30.9572 9.77362 30.6816 11.6663 30.1304 13.5613C29.5791 15.4564 28.7371 17.2702 27.6044 19.0029C26.4716 20.7357 25.1222 22.2707 23.5563 23.608C21.9904 24.9454 20.1081 26.0117 17.9093 26.807C15.7106 27.6023 13.3542 28 10.8401 28C6.91637 28 3.303 26.9407 0 24.8222C0.586244 24.8874 1.1485 24.9201 1.68677 24.9201C4.96473 24.9201 7.89247 23.9104 10.47 21.8911C8.94162 21.8631 7.57286 21.3926 6.36369 20.4797C5.15452 19.5667 4.3224 18.4002 3.86732 16.98C4.31713 17.0657 4.76108 17.1085 5.19917 17.1085C5.82977 17.1085 6.45026 17.0263 7.06066 16.8618C5.42961 16.5351 4.07651 15.7227 3.00137 14.4247C1.92627 13.1266 1.38871 11.6284 1.38871 9.93002V9.84249C2.38986 10.3968 3.45774 10.6917 4.59235 10.7271C3.62613 10.0829 2.86006 9.24293 2.29415 8.2071C1.72819 7.17127 1.44522 6.05032 1.44522 4.84425C1.44522 3.57225 1.76396 2.38777 2.40144 1.29083C4.17518 3.46749 6.32444 5.20715 8.84921 6.5098C11.374 7.81247 14.0827 8.53593 16.9751 8.68019C16.8518 8.16605 16.79 7.62953 16.7897 7.07061C16.7897 5.11909 17.4804 3.45277 18.8616 2.07166C20.2428 0.690554 21.9092 0 23.8607 0C25.9039 0 27.6249 0.743969 29.0237 2.23191C30.6219 1.91534 32.1183 1.34275 33.513 0.514135C32.9757 2.20515 31.9403 3.50965 30.4069 4.42764C31.8162 4.26016 33.1704 3.88984 34.4693 3.31668H34.4694Z" fill="black"/>
+                        </svg></a>                                                         
+                </button>
+                <button class="yt"><a href="https://youtube.com" target="_blank">
+                    <svg width="30" height="25" viewBox="0 0 36 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M34.9244 3.90526C34.7213 3.14904 34.3232 2.45941 33.7699 1.9054C33.2166 1.35138 32.5275 0.952409 31.7715 0.748408C28.9889 1.51859e-07 17.8344 0 17.8344 0C17.8344 0 6.67994 -1.51859e-07 3.89729 0.744427C3.141 0.947767 2.45153 1.34652 1.89811 1.90064C1.34469 2.45475 0.946812 3.14473 0.744427 3.90127C-1.51859e-07 6.6879 0 12.5 0 12.5C0 12.5 -1.51859e-07 18.3121 0.744427 21.0947C1.15446 22.6314 2.36465 23.8416 3.89729 24.2516C6.67994 25 17.8344 25 17.8344 25C17.8344 25 28.9889 25 31.7715 24.2516C33.3081 23.8416 34.5143 22.6314 34.9244 21.0947C35.6688 18.3121 35.6688 12.5 35.6688 12.5C35.6688 12.5 35.6688 6.6879 34.9244 3.90526ZM14.2914 17.8344V7.16561L23.5271 12.4602L14.2914 17.8344Z" fill="black"/>
+                    </svg></a>
+                </button>
+            </div>
+            <div class="social_links">
+                <button><a class="ig_a">Instagram</a>
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.4966 8.3314C10.2014 8.3314 8.32828 10.2045 8.32828 12.4998C8.32828 14.795 10.2014 16.6681 12.4966 16.6681C14.7919 16.6681 16.665 14.795 16.665 12.4998C16.665 10.2045 14.7919 8.3314 12.4966 8.3314ZM24.9986 12.4998C24.9986 10.7736 25.0142 9.06313 24.9173 7.34013C24.8204 5.33881 24.3638 3.56265 22.9004 2.09918C21.4338 0.632595 19.6607 0.179172 17.6594 0.0822335C15.9333 -0.0147052 14.2228 0.000930124 12.4998 0.000930124C10.7736 0.000930124 9.06313 -0.0147052 7.34013 0.0822335C5.33881 0.179172 3.56265 0.635722 2.09918 2.09918C0.632595 3.56577 0.179172 5.33881 0.0822335 7.34013C-0.0147052 9.06626 0.000930124 10.7768 0.000930124 12.4998C0.000930124 14.2228 -0.0147052 15.9364 0.0822335 17.6594C0.179172 19.6607 0.635722 21.4369 2.09918 22.9004C3.56577 24.3669 5.33881 24.8204 7.34013 24.9173C9.06626 25.0142 10.7768 24.9986 12.4998 24.9986C14.2259 24.9986 15.9364 25.0142 17.6594 24.9173C19.6607 24.8204 21.4369 24.3638 22.9004 22.9004C24.3669 21.4338 24.8204 19.6607 24.9173 17.6594C25.0174 15.9364 24.9986 14.2259 24.9986 12.4998V12.4998ZM12.4966 18.9134C8.94743 18.9134 6.08305 16.049 6.08305 12.4998C6.08305 8.95056 8.94743 6.08618 12.4966 6.08618C16.0458 6.08618 18.9102 8.95056 18.9102 12.4998C18.9102 16.049 16.0458 18.9134 12.4966 18.9134ZM19.1729 7.32137C18.3442 7.32137 17.675 6.65218 17.675 5.82351C17.675 4.99484 18.3442 4.32565 19.1729 4.32565C20.0016 4.32565 20.6708 4.99484 20.6708 5.82351C20.671 6.02028 20.6324 6.21516 20.5572 6.397C20.4821 6.57884 20.3717 6.74407 20.2326 6.8832C20.0935 7.02234 19.9282 7.13266 19.7464 7.20785C19.5646 7.28304 19.3697 7.32161 19.1729 7.32137V7.32137Z" fill="black"/>
+                    </svg>                                            
+                </button>
+                <button><a class="fb_a">Facebook</a>
+                    <svg width="25" height="25" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 0H1C0.734784 0 0.48043 0.105357 0.292893 0.292893C0.105357 0.48043 0 0.734784 0 1V17C0 17.2652 0.105357 17.5196 0.292893 17.7071C0.48043 17.8946 0.734784 18 1 18H9.615V11.04H7.277V8.315H9.615V6.315C9.615 3.99 11.035 2.723 13.115 2.723C13.814 2.721 14.514 2.757 15.21 2.83V5.25H13.775C12.647 5.25 12.427 5.788 12.427 6.575V8.31H15.124L14.774 11.035H12.426V18H17C17.2652 18 17.5196 17.8946 17.7071 17.7071C17.8946 17.5196 18 17.2652 18 17V1C18 0.734784 17.8946 0.48043 17.7071 0.292893C17.5196 0.105357 17.2652 0 17 0V0Z" fill="var(--color-black)"/></svg>
+                </button>
+                <button><a class="tw_a">Twitter</a>
+                    <svg width="28" height="28" viewBox="0 0 35 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M34.4694 3.31668C33.5095 4.74444 32.3319 5.96153 30.9365 6.96796C30.9503 7.23788 30.9572 7.54296 30.9572 7.8832C30.9572 9.77362 30.6816 11.6663 30.1304 13.5613C29.5791 15.4564 28.7371 17.2702 27.6044 19.0029C26.4716 20.7357 25.1222 22.2707 23.5563 23.608C21.9904 24.9454 20.1081 26.0117 17.9093 26.807C15.7106 27.6023 13.3542 28 10.8401 28C6.91637 28 3.303 26.9407 0 24.8222C0.586244 24.8874 1.1485 24.9201 1.68677 24.9201C4.96473 24.9201 7.89247 23.9104 10.47 21.8911C8.94162 21.8631 7.57286 21.3926 6.36369 20.4797C5.15452 19.5667 4.3224 18.4002 3.86732 16.98C4.31713 17.0657 4.76108 17.1085 5.19917 17.1085C5.82977 17.1085 6.45026 17.0263 7.06066 16.8618C5.42961 16.5351 4.07651 15.7227 3.00137 14.4247C1.92627 13.1266 1.38871 11.6284 1.38871 9.93002V9.84249C2.38986 10.3968 3.45774 10.6917 4.59235 10.7271C3.62613 10.0829 2.86006 9.24293 2.29415 8.2071C1.72819 7.17127 1.44522 6.05032 1.44522 4.84425C1.44522 3.57225 1.76396 2.38777 2.40144 1.29083C4.17518 3.46749 6.32444 5.20715 8.84921 6.5098C11.374 7.81247 14.0827 8.53593 16.9751 8.68019C16.8518 8.16605 16.79 7.62953 16.7897 7.07061C16.7897 5.11909 17.4804 3.45277 18.8616 2.07166C20.2428 0.690554 21.9092 0 23.8607 0C25.9039 0 27.6249 0.743969 29.0237 2.23191C30.6219 1.91534 32.1183 1.34275 33.513 0.514135C32.9757 2.20515 31.9403 3.50965 30.4069 4.42764C31.8162 4.26016 33.1704 3.88984 34.4693 3.31668H34.4694Z" fill="black"/>
+                        </svg>                                                          
+                </button>
+                <button><a class="yt_a">Youtube</a>
+                    <svg width="30" height="25" viewBox="0 0 36 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M34.9244 3.90526C34.7213 3.14904 34.3232 2.45941 33.7699 1.9054C33.2166 1.35138 32.5275 0.952409 31.7715 0.748408C28.9889 1.51859e-07 17.8344 0 17.8344 0C17.8344 0 6.67994 -1.51859e-07 3.89729 0.744427C3.141 0.947767 2.45153 1.34652 1.89811 1.90064C1.34469 2.45475 0.946812 3.14473 0.744427 3.90127C-1.51859e-07 6.6879 0 12.5 0 12.5C0 12.5 -1.51859e-07 18.3121 0.744427 21.0947C1.15446 22.6314 2.36465 23.8416 3.89729 24.2516C6.67994 25 17.8344 25 17.8344 25C17.8344 25 28.9889 25 31.7715 24.2516C33.3081 23.8416 34.5143 22.6314 34.9244 21.0947C35.6688 18.3121 35.6688 12.5 35.6688 12.5C35.6688 12.5 35.6688 6.6879 34.9244 3.90526ZM14.2914 17.8344V7.16561L23.5271 12.4602L14.2914 17.8344Z" fill="black"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="right_content">
+                <div class="links_touch">
+                    <div class="footer_parkInfo footer_links">
+                        <a href="park.html"><h6>Park Info</h6></a>
+                        <ul>
+                            <li><a class="locateus">Directions</a></li>
+                            <li>
+                                <a href="./theme_park_map.pdf" target="_blank">Park Map</a>
+                            </li>
+                            <li><a href="park.html">FAQs/RULES</a></li>
+                            <li><a href="restaurant.html">Restaurants</a></li>
+                            <li><a href="shop.html">Shopping Area</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer_groups footer_links">
+                        <a href="group.html"><h6>Groups</h6></a>
+                        <ul>
+                            <li><a href="group.html" class="footer_group_ticket">Group Outings</a></li>
+                            <li><a href="group.html?name=group_outing" class="footer_group_picnic">Birthday Parties</a></li>
+                            <li><a href="group.html?name=school_picnic"  class="footer_group_outing">School Picnic</a></li>
+                            <li><a href="group.html?name=consignment"  class="footer_group_cticket">Wedding Parties</a></li>
+                        </ul>
+                    </div>
+                                        
+                    <div class="footer_groups footer_links">
+                        <a href="rides.html"><h6>Rides</h6></a>
+                        <ul>
+                            <li><a href="rides.html" class="footer_rides_thrill">Thrill rides</a></li>
+                            <li><a href="rides.html?name=major" class="footer_rides_major">Major rides</a></li>
+                            <li><a href="rides.html?name=kids" class="footer_rides_kids">Kids attraction</a></li>
+                            <li><a href="rides.html?name=water" class="footer_rides_water">Water Rides</a></li>
+                        </ul>
+                    </div>
+                                        
+                    <div class="footer_contact footer_links">
+                        <h6>Contact us</h6>
+                        <ul>
+                            <li><a href="tel:+919086574213">9086574213</a></li>
+                            <li class="gmail"><a>rdthemepark@gmail.com</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="get_in_touch footer_links">
+                        <h4>GET IN TOUCH</h4>
+                        <input type="text" placeholder="Name" id="Name" name="Name">
+                        <input type="email" name="e-mail" id="e-mail" placeholder="E-mail">
+                        <input type="text" name="number" id="number" placeholder="Phone Number">
+                        <input type="textarea" name="message" id="message" placeholder="Message">
+                        <Button class="submit_btn">Submit</Button>
+                    </div>
+                </div>
+            <div class="lower">
+                <p class="location">We are located near Lonavala. Our address is: 30/31 Sangdewadi, Khopoli Pali Road, Near
+                    Lonavala, Khalapur, 410203, Maharashtra, India</p>
+                <h4 class="copyright">Copyright © 2016 2020 Theme park. All Rights Reserved</h4>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="./js/script.js"></script>
+</html>
