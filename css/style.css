@@ -1647,6 +1647,14 @@ input[type="number"]::-webkit-outer-spin-button {
 
 /* -------------------------------------------------Click Here----------------------------------------------- */
 
+.rules{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: 7em;
+  padding-left: 3vw;
+}
+
 #clickhere {
   display: none;
   position: fixed;
@@ -1654,16 +1662,14 @@ input[type="number"]::-webkit-outer-spin-button {
   top: 0%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 1);
-  /*   background: linear-gradient(
-    to left top,
-    rgba(255, 255, 255, 0.7),
-    rgba(255, 255, 255, 0.3)
-  ); */
   width: 100vw;
   height: 100vh;
   z-index: 99999;
   padding: 2rem;
+}
+
+.rules svg{
+  display: none;
 }
 
 #clickhere svg {
@@ -1674,12 +1680,14 @@ input[type="number"]::-webkit-outer-spin-button {
   cursor: pointer;
 }
 
+.rules .sp_bg,
 #clickhere .sp_bg {
   font-size: var(--font-bold);
   margin: 1.5rem 1rem;
   letter-spacing: 1px;
 }
 
+.rules ol li,
 #clickhere ol li {
   font-size: calc(var(--font-light) + 0.2vw);
   margin: 1rem 4rem;
