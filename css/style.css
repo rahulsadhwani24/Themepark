@@ -1651,7 +1651,6 @@ input[type="number"]::-webkit-outer-spin-button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-block: 7em;
   padding-left: 3vw;
 }
 
